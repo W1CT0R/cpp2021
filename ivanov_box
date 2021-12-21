@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+class Box{
+public:    
+    int a;
+    int b;
+    int c;
+    int V();
+    int S();
+    Box(int a1=1, int b1=1, int c1=1){
+        a = a1;
+        b = b1;
+        c = c1;
+    }
+    ~Box(){cout <<"box has fallen\n";}
+};
+int Box::V(){
+    return a*b*c;
+    }
+int Box::S(){
+    return a*b;
+    }
+int main()
+{
+    Box box1(3,12,9);
+    cout << "New Box" << '\n';
+    cout << "Volume - " <<box1.V()<< '\n';
+    cout << "Area - "<< box1.S()<< '\n';
+    Box box2(12,1,5);
+    cout << "New Box" << '\n';
+    cout << "Volume - "<< box2.V()<< '\n';
+    cout << "Area - "<< box2.S()<< '\n';
+    Box box3(7,6,5);
+    cout << "New Box" << '\n';
+    cout << "Volume - "<< box3.V()<< '\n';
+    cout << "Area - "<< box3.S()<< '\n';
+    return 0;
+}
