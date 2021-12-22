@@ -2,37 +2,37 @@
 using namespace std;
 class Box{
 public:    
-    int a;
-    int b;
-    int c;
-    int V();
-    int S();
-    Box(int a1=1, int b1=1, int c1=1){
-        a = a1;
-        b = b1;
-        c = c1;
+    int q;
+    int w;
+    int e;
+    int Z();
+    int X();
+    Box(int q1=1, int w1=1, int e1=1){
+        q = q1;
+        w = w1;
+        e = e1;
     }
     ~Box(){cout <<"box has fallen\n";}
 };
-int Box::V(){
-    return a*b*c;
+int Box::Z(){
+    return q*w*e;
     }
-int Box::S(){
-    return a*b;
+int Box::X(){
+    return q*w;
     }
 int main()
 {
     Box box1(3,12,9);
     cout << "New Box" << '\n';
-    cout << "Volume - " <<box1.V()<< '\n';
-    cout << "Area - "<< box1.S()<< '\n';
+    cout << "Volume - " <<box1.Z()<< '\n';
+    cout << "Area - "<< box1.X()<< '\n';
     Box box2(12,1,5);
     cout << "New Box" << '\n';
-    cout << "Volume - "<< box2.V()<< '\n';
-    cout << "Area - "<< box2.S()<< '\n';
+    cout << "Volume - "<< box2.Z()<< '\n';
+    cout << "Area - "<< box2.X()<< '\n';
     Box box3(7,6,5);
     cout << "New Box" << '\n';
-    cout << "Volume - "<< box3.V()<< '\n';
-    cout << "Area - "<< box3.S()<< '\n';
+    cout << "Volume - "<< box3.Z()<< '\n';
+    cout << "Area - "<< box3.X()<< '\n';
     return 0;
 }
