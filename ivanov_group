@@ -1,0 +1,25 @@
+#include <iostream>
+#include <stdio.h>
+#include "group.h"
+using namespace std;
+Group SummGroups(Group a, Group b){
+    Group c;
+    c.female = a.female + b.female; 
+    c.male = a.male + b.male;
+    return c;
+} 
+int main()
+{
+    Group group1(12, 13), group2(14,8);    
+    cout<<"число девушек: ";
+    cout << group1.female << "\n";    
+    cout<<"число парней: ";
+    cout << group1.male << "\n";    
+     cout<<"число учащихся первой группы: ";
+    cout << group1.total() << "\n";    
+     cout<<"число учащихся второй группы: ";
+    cout << group2.total() << "\n";    
+    cout<<"сумма учащихся двух групп ";
+    cout << SummGroups(group1, group2).total() << "\n";    
+    return 0;
+}
